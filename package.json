@@ -1,0 +1,52 @@
+{
+    "name": "cesium-referencing-unreferenced-tileset",
+    "version": "1.0.0",
+    "description": "Cesium referencing an unreferenced tileset",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack",
+        "watch": "webpack --watch",
+        "dev": "webpack-dev-server"
+    },
+    "repository": {
+        "type": "git"
+    },
+    "keywords": [
+        "OGC",
+        "WMS",
+        "GLOBE",
+        "Tiles",
+        "3DTiles"
+    ],
+    "author": "Emeric Beaufays",
+    "license": "MIT",
+    "dependencies": {
+        "barycentric": "^1.0.1",
+        "cesium": "^1.95.0",
+        "lodash": ">=4.17.20",
+        "point-in-polygon": "^1.1.0",
+        "set-interval-async": "^2.0.3",
+        "three": "^0.142.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.18.0",
+        "@babel/preset-env": "^7.18.0",
+        "babel-loader": "^8.2.5",
+        "copy-webpack-plugin": "^6.3.2",
+        "core-js": "^3.22.7",
+        "css-loader": "^5.2.7",
+        "file-loader": "^6.2.0",
+        "html-loader": "^1.3.2",
+        "html-webpack-plugin": "^4.5.0",
+        "mini-css-extract-plugin": "^1.3.1",
+        "node-sass": "^7.0.1",
+        "postcss-loader": "^6.2.1",
+        "sass-loader": "^13.0.2",
+        "style-loader": "^2.0.0",
+        "url-loader": "^4.1.1",
+        "webpack": "4.44.2",
+        "webpack-cli": "3.3.12",
+        "webpack-dev-server": "3.11.0",
+        "whatwg-fetch": "^3.5.0"
+    }
+}
