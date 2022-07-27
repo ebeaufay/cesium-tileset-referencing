@@ -4,7 +4,7 @@
     "description": "Cesium referencing an unreferenced tileset",
     "main": "index.js",
     "scripts": {
-        "build": "webpack",
+        "build": "node_modules/.bin/webpack --config webpack.config.js",
         "watch": "webpack --watch",
         "dev": "webpack-dev-server"
     },

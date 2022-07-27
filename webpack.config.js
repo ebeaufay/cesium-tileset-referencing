@@ -21,6 +21,10 @@ module.exports = {
         // Enable webpack-friendly use of require in Cesium
         toUrlUndefined: true
     },
+    node: {
+        // Resolve node module use of fs
+        fs: 'empty'
+    },
     resolve: {
         alias: {
             cesium: path.resolve(__dirname, cesiumSource)
@@ -38,19 +42,20 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html'
+            template: 'src/index.html'
         }),
         // Copy Cesium Assets, Widgets, and Workers to a static directory
         new CopyWebpackPlugin({
             patterns: [
                 { from: path.join(cesiumSource, cesiumWorkers), to: 'Workers' },
                 { from: path.join(cesiumSource, 'Assets'), to: 'Assets' },
-                { from: path.join(cesiumSource, 'Widgets'), to: 'Widgets' }
+                { from: path.join(cesiumSource, 'Widgets'), to: 'Widgets' },
+                { from: 'ThirdParty', to: 'ThirdParty' }
             ]
         }),
         new webpack.DefinePlugin({
             // Define relative base path in cesium for loading assets
-            CESIUM_BASE_URL: JSON.stringify('')
+            CESIUM_BASE_URL: JSON.stringify('../')
         })
     ],
     mode: 'development',
