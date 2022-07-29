@@ -72,4 +72,5 @@ document.getElementById("applyGeoloc").onclick = ()=>{
 
     tileset.modelMatrix = computeTransformationMatrix(lon, lat, height, rotationXYZ, scale);
     
+    viewer.zoomTo(tileset, new Cesium.HeadingPitchRange(0.5, -0.5, 70));
 }
