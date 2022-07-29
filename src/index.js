@@ -8,11 +8,10 @@ const viewer = init();
 
 
 /// location ///
-
 const lon = -76.613170;
 const lat = 39.274965;
 const height = 10.2;
-const rotationXYZ = new Cesium.Cartesian3(0.0, 0, Math.PI+0.05); //Rotation in radians about the XYZ axis applied in the order X,Y,Z
+const rotationXYZ = new Cesium.Cartesian3(0.0, 0, Math.PI + 0.05); //Rotation in radians about the XYZ axis applied in the order X,Y,Z
 const scale = new Cesium.Cartesian3(1.18, 1.18, 1.18); // XYZ scale
 
 const matrix = computeTransformationMatrix(lon, lat, height, rotationXYZ, scale);
@@ -60,4 +59,17 @@ function computeTransformationMatrix(lon, lat, height, rotation, scale) {
     Cesium.Matrix4.multiply(matrix, rotationMatrix, matrix);
 
     return matrix;
+}
+
+document.getElementById("applyGeoloc").onclick = ()=>{
+    const lon = Number(document.getElementById("longitudeInput").value);
+    const lat = Number(document.getElementById("latitudeInput").value);
+    const height = Number(document.getElementById("heightInput").value);
+    const s = Number(document.getElementById("scaleInput").value);
+    const scale = new Cesium.Cartesian3(s, s, s);
+    const rotationZ = Number(document.getElementById("orientationInput").value);
+    const rotationXYZ = new Cesium.Cartesian3(0.0, 0, rotationZ/360*2*Math.PI);
+
+    tileset.modelMatrix = computeTransformationMatrix(lon, lat, height, rotationXYZ, scale);
+    
 }

@@ -18,8 +18,42 @@
   z-index: 9999;
   margin: 5px;
   font-size: 16px;">
-  <div style="margin:5px"></div>
-    <a href="https://skfb.ly/o9YHT"><strong>ORIGINAL MODEL</strong></a> converted to OGC 3DTiles via <a href="https://github.com/ebeaufay/threedtiles"><strong>ULTRAMESH</strong> 
+    <div style="margin:5px">
+      <a href="https://skfb.ly/o9YHT"><strong>ORIGINAL MODEL</strong></a> converted to OGC 3DTiles via 
+      <a href="https://github.com/ebeaufay/threedtiles"><strong>ULTRAMESH</strong></a>
+    </div>
+  </div>
+
+  <div style="
+  position:absolute;
+  background-color: rgb(4, 41, 30);
+  width: 300px;
+  height: auto;
+  top:10%; 
+  left:0%;
+  color: White;
+  z-index: 9999;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 16px;">
+    <div style="margin:5%">
+      <h3>Tileset geolocation</h3>
+      <hr>
+      
+      <label for="longitudeInput">Longitude: </label>
+      <input style="float: right;" type="text" id="longitudeInput" name="longitudeInput" value="-76.613170"><br><br>
+      <label for="latitudeInput">Latitude: </label>
+      <input style="float: right;" type="text" id="latitudeInput" name="latitudeInput" value="39.274965"><br><br>
+      <label for="heightInput">Height: </label>
+      <input style="float: right;" type="text" id="heightInput" name="heightInput" value="10.2"><br><br><br>
+
+      <label for="scaleInput">Scale: </label>
+      <input style="float: right;" type="text" id="scaleInput" name="scaleInput" value="1.18"><br><br><br>
+      <label for="orientationInput">Orientation: </label>
+      <input style="float: right;" type="text" id="orientationInput" name="orientationInput" value="182.86"><br><br>
+      
+      <button style="float: right; margin-right:5%;" id="applyGeoloc">Apply</button><br>
+    </div>
   </div>
 </body>
 
