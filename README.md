@@ -7,4 +7,4 @@ It uses box or sphere bounding volumes (not region) and has no transformation ba
 
 This demo shows how to reference such a tileset in Cesium.js given a location in lon/lat/height, a scale and rotation.
 
-The [original model](https://skfb.ly/o9YHT) in the demo is converted to 3DTiles via private code. contact: emericbeaufays@gmail.com
+The [original model](https://skfb.ly/o9YHT) in the demo is converted to 3DTiles via the ULTRAMESH tool. contact: www.jdultra.com
